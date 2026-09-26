@@ -74,3 +74,14 @@ if (typeof ScrollReveal !== 'undefined') {
   sr.reveal('section p:not(main > section:first-of-type p)', { origin: 'bottom', distance: '30px', delay: 200 });
   sr.reveal('article', { origin: 'bottom', distance: '40px', interval: 100 });
 }
+
+// Card Cursor Animation
+document.querySelectorAll('.cursor-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty('--mouse-x', x + 'px');
+    card.style.setProperty('--mouse-y', y + 'px');
+  });
+});
