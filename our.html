@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="A modern humanitarian NGO website focused on education, healthcare, women empowerment, legal aid and community support.">
+  <title>Ankush Purohit Foundation | Our Impact</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-blue': '#0F4E82',
+            'primary-orange': '#F17E30',
+            'primary-red': '#C0292F',
+            'green': '#14994D',
+            'light-bg': '#F8FAFC',
+            'dark': '#172033',
+            'muted': '#667085',
+            'line': '#e8e8ee'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            poppins: ['Poppins', 'Arial', 'sans-serif'],
+            cursive: ['Caveat', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+    @layer components {
+      .scrolled {
+        @apply shadow-[0_8px_25px_rgba(15,78,130,0.08)] border-line;
+      }
+      .open {
+        @apply !flex;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-dark bg-[#fafbfe] leading-[1.6] overflow-x-hidden">
+
+  <!-- Topbar -->
+  <div class="hidden md:block bg-primary-blue text-white text-[12px] py-[8px]">
+    <div class="w-[min(100%-28px,1280px)] mx-auto flex items-center justify-between">
+      <div class="flex gap-[20px] font-[500]">
+        <a href="mailto:ankushpurohit1008@gmail.com"
+          class="opacity-90 inline-flex items-center gap-[6px] hover:text-primary-orange transition-colors"><i
+            class="ph ph-envelope text-[14px]"></i> ankushpurohit1008@gmail.com</a>
+        <a href="tel:+919724232498"
+          class="opacity-90 inline-flex items-center gap-[6px] hover:text-primary-orange transition-colors"><i
+            class="ph ph-phone text-[14px]"></i> +91 97242 32498</a>
+      </div>
+      <div class="flex items-center gap-[15px]">
+        <span class="opacity-90 font-[500]">एक कदम इंसानियत की ओर</span>
+        <span class="w-[1px] h-[12px] bg-white/30"></span>
+        <div class="flex gap-[12px] text-[15px]">
+          <a href="#" class="opacity-90 hover:text-primary-orange transition-colors"><i
+              class="ph-fill ph-facebook-logo"></i></a>
+          <a href="#" class="opacity-90 hover:text-primary-orange transition-colors"><i
+              class="ph-fill ph-instagram-logo"></i></a>
+          <a href="#" class="opacity-90 hover:text-primary-orange transition-colors"><i
+              class="ph-fill ph-youtube-logo"></i></a>
+          <a href="#" class="opacity-90 hover:text-primary-orange transition-colors"><i
+              class="ph-fill ph-globe"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white border-b border-line shadow-sm transition-[0.25s]" id="header">
+    <div class="w-[min(100%-28px,1280px)] mx-auto h-[80px] md:h-[90px] flex items-center justify-between">
+      <a class="flex items-center" href="index.html" aria-label="Ankush Purohit Foundation home">
+        <img src="assets/ankush logo.png" alt="Ankush Purohit Foundation logo"
+          class="h-[50px] md:h-[65px] w-auto object-contain">
+      </a>
+      <button class="lg:hidden bg-transparent border-0 w-[40px]" id="menuToggle" aria-label="Open menu"
+        aria-expanded="false">
+        <span class="block h-[2px] bg-primary-blue my-[6px]"></span>
+        <span class="block h-[2px] bg-primary-blue my-[6px]"></span>
+        <span class="block h-[2px] bg-primary-blue my-[6px]"></span>
+      </button>
+      <nav
+        class="hidden lg:flex flex-col lg:flex-row absolute lg:relative top-[80px] lg:top-auto left-0 right-0 bg-white lg:bg-transparent border-t border-line lg:border-none p-[20px] lg:p-0 items-stretch lg:items-center gap-[5px] lg:gap-[32px] text-[15px] font-[600] text-[#1e293b] shadow-lg lg:shadow-none"
+        id="mainNav">
+        <a href="index.html" class="p-[10px_16px] lg:p-[8px_0px] hover:text-primary-orange transition-colors">What We
+          Do</a>
+        <a href="our.html" class="p-[10px_16px] lg:p-[8px_0px] text-primary-orange hover:text-primary-orange transition-colors">Our
+          Impact</a>
+        <a href="about.html" class="p-[10px_16px] lg:p-[8px_0px] hover:text-primary-orange transition-colors">About</a>
+        <a href="fundraisers.html"
+          class="p-[10px_16px] lg:p-[8px_0px] hover:text-primary-orange transition-colors">Fundraisers</a>
+        <a href="categories.html"
+          class="p-[10px_16px] lg:p-[8px_0px] hover:text-primary-orange transition-colors">Categories</a>
+        <a href="contact.html"
+          class="p-[10px_16px] lg:p-[8px_0px] hover:text-primary-orange transition-colors">Contact</a>
+        <a class="bg-primary-orange text-white flex items-center justify-center px-[28px] py-[12px] rounded-[8px] font-[700] text-[15px] hover:opacity-90 transition-opacity lg:ml-[10px] mt-[10px] lg:mt-0"
+          href="#qr-code">Donate now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-white pt-[40px] pb-[160px] md:pt-[60px] md:pb-[200px] overflow-hidden">
+      <!-- Background Curved Shape -->
+      <div class="absolute top-0 right-0 w-[55%] h-full z-0 overflow-hidden hidden md:block">
+        <div class="absolute inset-0 bg-primary-blue rounded-l-full translate-x-[10%] scale-[1.2] origin-right shadow-2xl overflow-hidden">
+          <img src="assets/imgi_16_APF3.webp" alt="Smiling children" class="w-full h-full object-cover opacity-80 mix-blend-overlay">
+        </div>
+      </div>
+
+      <div class="w-[min(100%-28px,1280px)] mx-auto relative z-10 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-[40px] items-center">
+        <!-- Left Content -->
+        <div>
+          <!-- Breadcrumb -->
+          <div class="flex items-center gap-[8px] text-[13px] font-[500] text-muted mb-[25px]">
+            <a href="index.html" class="hover:text-primary-orange transition-colors">Home</a>
+            <i class="ph ph-caret-right text-[10px]"></i>
+            <span class="text-primary-blue font-[600]">Our Impact</span>
+          </div>
+
+          <!-- Headings -->
+          <h1 class="font-poppins font-[700] text-[42px] md:text-[56px] lg:text-[72px] leading-[1.1] text-primary-blue tracking-[-0.02em] mb-[15px]">
+            Our <span class="text-primary-orange">Impact</span>
+          </h1>
+          <h3 class="font-poppins font-[600] text-[20px] md:text-[24px] text-dark mb-[20px]">
+            Real people. Real change. Real stories.
+          </h3>
+          <p class="text-[16px] text-muted font-[500] leading-[1.6] max-w-[500px] mb-[35px]">
+            With your support, we are creating lasting change in the lives of families and communities across India. Every meal served, every home built, and every smile we bring is a step towards a stronger, kinder and more compassionate society.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-[16px]">
+            <a href="#qr-code"
+              class="bg-primary-orange text-white flex items-center justify-center gap-[8px] px-[28px] py-[13px] rounded-[8px] font-[700] text-[15px] hover:bg-primary-blue transition-colors shadow-md">
+              Donate Now <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="#impact-areas"
+              class="bg-white border-[2px] border-primary-blue text-primary-blue flex items-center justify-center gap-[8px] px-[28px] py-[13px] rounded-[8px] font-[700] text-[15px] hover:bg-primary-blue hover:text-white transition-colors">
+              Support Our Work
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- Impact Across Communities -->
+    <section class="py-[60px] bg-white">
+      <div class="w-[min(100%-28px,1180px)] mx-auto grid grid-cols-1 md:grid-cols-3 gap-[50px] items-center">
+        <!-- Left Text -->
+        <div>
+          <span class="inline-flex items-center gap-[15px] text-primary-orange text-[12px] font-[800] tracking-[0.12em] uppercase mb-[12px]">
+            <span class="w-[30px] h-[2px] bg-primary-orange"></span> OUR REACH
+          </span>
+          <h2 class="font-poppins font-[700] leading-[1.1] text-primary-blue text-[32px] md:text-[40px] mb-[20px]">
+            Impact Across <br><span class="text-primary-orange">Communities</span>
+          </h2>
+          <p class="text-muted text-[15px] leading-[1.7] mb-[30px]">
+            Our volunteers work across different regions of India to bring support, care and lasting change. From food and shelter to education and healthcare, we focus on empowering people and building stronger communities.
+          </p>
+          <a href="#" class="inline-flex items-center justify-center gap-[8px] bg-primary-orange text-white px-[24px] py-[12px] rounded-[8px] font-[700] text-[14px] hover:bg-primary-blue transition-colors">
+            View Our Work <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Center Graphic -->
+        <div class="flex justify-center items-center relative min-h-[300px]">
+          <img src="assets/mape.png" alt="Impact Map" class="w-[85%] max-w-[400px] h-auto object-contain">
+        </div>
+
+        <!-- Right Stats list -->
+        <div class="flex flex-col gap-[25px]">
+          <div class="flex items-center gap-[20px] bg-[#fafbfe] p-[15px] rounded-[12px] border border-line">
+            <div class="text-primary-red text-[36px]"><i class="ph-fill ph-map-trifold"></i></div>
+            <div>
+              <strong class="font-poppins font-[700] text-[22px] text-dark block leading-[1]">12+</strong>
+              <span class="text-[13px] text-muted font-[600]">States Reached</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-[20px] bg-[#fafbfe] p-[15px] rounded-[12px] border border-line">
+            <div class="text-primary-orange text-[36px]"><i class="ph-fill ph-handshake"></i></div>
+            <div>
+              <strong class="font-poppins font-[700] text-[22px] text-dark block leading-[1]">50+</strong>
+              <span class="text-[13px] text-muted font-[600]">Active Projects</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-[20px] bg-[#fafbfe] p-[15px] rounded-[12px] border border-line">
+            <div class="text-primary-orange text-[36px]"><i class="ph-fill ph-users"></i></div>
+            <div>
+              <strong class="font-poppins font-[700] text-[22px] text-dark block leading-[1]">500+</strong>
+              <span class="text-[13px] text-muted font-[600]">Dedicated Volunteers</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-[20px] bg-[#fafbfe] p-[15px] rounded-[12px] border border-line">
+            <div class="text-green text-[36px]"><i class="ph-fill ph-house-line"></i></div>
+            <div>
+              <strong class="font-poppins font-[700] text-[22px] text-dark block leading-[1]">100+</strong>
+              <span class="text-[13px] text-muted font-[600]">Communities Served</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creating Change Where It Matters (Impact Areas) -->
+    <section class="py-[70px] bg-[#fafbfe]" id="impact-areas">
+      <div class="w-[min(100%-28px,1280px)] mx-auto text-center mb-[40px]">
+        <span class="inline-flex items-center gap-[10px] text-primary-blue text-[12px] font-[800] tracking-[0.1em] uppercase mb-[10px]">
+           IMPACT AREAS
+        </span>
+        <h2 class="font-poppins font-[700] leading-[1.2] text-primary-blue text-[32px] md:text-[40px]">
+          Creating Change <span class="text-primary-orange">Where It Matters</span>
+        </h2>
+        <p class="text-muted text-[15px] mt-[10px] max-w-[700px] mx-auto">
+          We work on multiple areas to uplift underprivileged communities and create sustainable impact.
+        </p>
+      </div>
+
+      <div class="w-[min(100%-28px,1380px)] mx-auto relative group">
+        <!-- Horizontal Scroll Container -->
+        <div id="impactAreasCarousel" class="flex overflow-x-auto gap-[20px] pb-[30px] snap-x px-[14px] scrollbar-hide scroll-smooth">
+          
+          <!-- Card 1 -->
+          <article class="min-w-[280px] w-[280px] bg-white rounded-[16px] shadow-sm border border-line overflow-hidden snap-center flex-shrink-0 flex flex-col items-center text-center pb-[25px] transition-transform hover:-translate-y-2">
+            <div class="w-full h-[180px] overflow-hidden mb-[-25px]">
+               <img src="assets/imgi_33_APF5.webp" alt="Food & Nutrition" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[50px] h-[50px] rounded-full bg-primary-orange flex items-center justify-center text-white border-[4px] border-white relative z-10">
+               <i class="ph-fill ph-bowl-food text-[24px]"></i>
+            </div>
+            <div class="px-[20px] pt-[15px] flex-1 flex flex-col">
+              <h3 class="font-poppins font-[700] text-[17px] text-primary-blue mb-[8px]">Food & Nutrition</h3>
+              <p class="text-[13px] text-muted leading-[1.5] flex-1">Providing nutritious meals to children, families and vulnerable individuals.</p>
+              <a href="#" class="inline-flex items-center justify-center gap-[5px] text-primary-orange text-[13px] font-[700] mt-[15px]">View Impact <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="min-w-[280px] w-[280px] bg-white rounded-[16px] shadow-sm border border-line overflow-hidden snap-center flex-shrink-0 flex flex-col items-center text-center pb-[25px] transition-transform hover:-translate-y-2">
+            <div class="w-full h-[180px] overflow-hidden mb-[-25px]">
+               <img src="assets/imgi_32_APF4.webp" alt="Education Support" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[50px] h-[50px] rounded-full bg-primary-blue flex items-center justify-center text-white border-[4px] border-white relative z-10">
+               <i class="ph-fill ph-graduation-cap text-[24px]"></i>
+            </div>
+            <div class="px-[20px] pt-[15px] flex-1 flex flex-col">
+              <h3 class="font-poppins font-[700] text-[17px] text-primary-blue mb-[8px]">Education Support</h3>
+              <p class="text-[13px] text-muted leading-[1.5] flex-1">Helping children access education and a brighter future.</p>
+              <a href="#" class="inline-flex items-center justify-center gap-[5px] text-primary-orange text-[13px] font-[700] mt-[15px]">View Impact <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="min-w-[280px] w-[280px] bg-white rounded-[16px] shadow-sm border border-line overflow-hidden snap-center flex-shrink-0 flex flex-col items-center text-center pb-[25px] transition-transform hover:-translate-y-2">
+            <div class="w-full h-[180px] overflow-hidden mb-[-25px]">
+               <img src="assets/imgi_22_APF5.webp" alt="Homes & Shelter" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[50px] h-[50px] rounded-full bg-primary-red flex items-center justify-center text-white border-[4px] border-white relative z-10">
+               <i class="ph-fill ph-house text-[24px]"></i>
+            </div>
+            <div class="px-[20px] pt-[15px] flex-1 flex flex-col">
+              <h3 class="font-poppins font-[700] text-[17px] text-primary-blue mb-[8px]">Homes & Shelter</h3>
+              <p class="text-[13px] text-muted leading-[1.5] flex-1">Building and repairing homes for families in need.</p>
+              <a href="#" class="inline-flex items-center justify-center gap-[5px] text-primary-orange text-[13px] font-[700] mt-[15px]">View Impact <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="min-w-[280px] w-[280px] bg-white rounded-[16px] shadow-sm border border-line overflow-hidden snap-center flex-shrink-0 flex flex-col items-center text-center pb-[25px] transition-transform hover:-translate-y-2">
+            <div class="w-full h-[180px] overflow-hidden mb-[-25px]">
+               <img src="assets/imgi_40_APF2.webp" alt="Healthcare Support" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[50px] h-[50px] rounded-full bg-[#1877f2] flex items-center justify-center text-white border-[4px] border-white relative z-10">
+               <i class="ph-fill ph-first-aid text-[24px]"></i>
+            </div>
+            <div class="px-[20px] pt-[15px] flex-1 flex flex-col">
+              <h3 class="font-poppins font-[700] text-[17px] text-primary-blue mb-[8px]">Healthcare Support</h3>
+              <p class="text-[13px] text-muted leading-[1.5] flex-1">Supporting medical aid, health camps and essential healthcare services.</p>
+              <a href="#" class="inline-flex items-center justify-center gap-[5px] text-primary-orange text-[13px] font-[700] mt-[15px]">View Impact <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="min-w-[280px] w-[280px] bg-white rounded-[16px] shadow-sm border border-line overflow-hidden snap-center flex-shrink-0 flex flex-col items-center text-center pb-[25px] transition-transform hover:-translate-y-2">
+            <div class="w-full h-[180px] overflow-hidden mb-[-25px]">
+               <img src="assets/imgi_44_APF1.webp" alt="Community Welfare" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[50px] h-[50px] rounded-full bg-[#9b51e0] flex items-center justify-center text-white border-[4px] border-white relative z-10">
+               <i class="ph-fill ph-users-three text-[24px]"></i>
+            </div>
+            <div class="px-[20px] pt-[15px] flex-1 flex flex-col">
+              <h3 class="font-poppins font-[700] text-[17px] text-primary-blue mb-[8px]">Community Welfare</h3>
+              <p class="text-[13px] text-muted leading-[1.5] flex-1">Empowering communities through support, guidance and opportunities.</p>
+              <a href="#" class="inline-flex items-center justify-center gap-[5px] text-primary-orange text-[13px] font-[700] mt-[15px]">View Impact <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="min-w-[280px] w-[280px] bg-white rounded-[16px] shadow-sm border border-line overflow-hidden snap-center flex-shrink-0 flex flex-col items-center text-center pb-[25px] transition-transform hover:-translate-y-2">
+            <div class="w-full h-[180px] overflow-hidden mb-[-25px]">
+               <img src="assets/imgi_49_APF2.webp" alt="Humanitarian Response" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[50px] h-[50px] rounded-full bg-green flex items-center justify-center text-white border-[4px] border-white relative z-10">
+               <i class="ph-fill ph-leaf text-[24px]"></i>
+            </div>
+            <div class="px-[20px] pt-[15px] flex-1 flex flex-col">
+              <h3 class="font-poppins font-[700] text-[17px] text-primary-blue mb-[8px]">Humanitarian Response</h3>
+              <p class="text-[13px] text-muted leading-[1.5] flex-1">Rapid support during natural calamities and crisis situations.</p>
+              <a href="#" class="inline-flex items-center justify-center gap-[5px] text-primary-orange text-[13px] font-[700] mt-[15px]">View Impact <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+        
+        <!-- Navigation arrows -->
+        <button onclick="document.getElementById('impactAreasCarousel').scrollBy({left: -300, behavior: 'smooth'})" class="absolute left-[-20px] top-[40%] bg-white w-[40px] h-[40px] rounded-full shadow-lg border border-line flex items-center justify-center text-primary-blue hidden md:flex z-10 hover:bg-primary-orange hover:text-white hover:border-primary-orange transition-colors">
+          <i class="ph ph-caret-left text-[20px]"></i>
+        </button>
+        <button onclick="document.getElementById('impactAreasCarousel').scrollBy({left: 300, behavior: 'smooth'})" class="absolute right-[-20px] top-[40%] bg-white w-[40px] h-[40px] rounded-full shadow-lg border border-line flex items-center justify-center text-primary-blue hidden md:flex z-10 hover:bg-primary-orange hover:text-white hover:border-primary-orange transition-colors">
+          <i class="ph ph-caret-right text-[20px]"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Our Journey & Stories -->
+    <section class="py-[70px] bg-white">
+      <div class="w-[min(100%-28px,1180px)] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
+        <!-- Journey Chart -->
+        <div>
+          <h2 class="font-poppins font-[700] leading-[1.2] text-primary-blue text-[32px] md:text-[36px] mb-[10px]">
+            Our Journey <span class="text-primary-orange">in Numbers</span>
+          </h2>
+          <p class="text-muted text-[15px] mb-[30px]">
+            These numbers inspire us every day to keep doing more and create a better tomorrow.
+          </p>
+          
+          <!-- Abstract Bar Chart -->
+          <div class="flex items-end justify-between h-[250px] border-b border-line pb-[10px] px-[10px] relative">
+             <!-- Y-axis labels -->
+             <div class="absolute left-[-20px] h-full flex flex-col justify-between text-[11px] text-muted pb-[10px] font-[500]">
+                <span>50K</span>
+                <span>40K</span>
+                <span>30K</span>
+                <span>20K</span>
+                <span>10K</span>
+                <span>0</span>
+             </div>
+             
+             <!-- Bars -->
+             <div class="flex flex-col items-center gap-[8px] w-[15%]">
+                <span class="font-[700] text-[13px] text-dark">12K</span>
+                <div class="w-full bg-primary-orange rounded-t-[6px] h-[24%] transition-all hover:opacity-80 relative group">
+                   <span class="absolute inset-0 flex items-center justify-center text-white/50 font-[600] text-[12px] opacity-0 group-hover:opacity-100">12K</span>
+                </div>
+                <span class="text-[12px] text-muted font-[600]">2020</span>
+             </div>
+             
+             <div class="flex flex-col items-center gap-[8px] w-[15%]">
+                <span class="font-[700] text-[13px] text-dark">18K</span>
+                <div class="w-full bg-[#f9bc0f] rounded-t-[6px] h-[36%] transition-all hover:opacity-80 relative group">
+                   <span class="absolute inset-0 flex items-center justify-center text-white/50 font-[600] text-[12px] opacity-0 group-hover:opacity-100">18K</span>
+                </div>
+                <span class="text-[12px] text-muted font-[600]">2021</span>
+             </div>
+             
+             <div class="flex flex-col items-center gap-[8px] w-[15%]">
+                <span class="font-[700] text-[13px] text-dark">24K</span>
+                <div class="w-full bg-[#82c91e] rounded-t-[6px] h-[48%] transition-all hover:opacity-80 relative group">
+                   <span class="absolute inset-0 flex items-center justify-center text-white/50 font-[600] text-[12px] opacity-0 group-hover:opacity-100">24K</span>
+                </div>
+                <span class="text-[12px] text-muted font-[600]">2022</span>
+             </div>
+             
+             <div class="flex flex-col items-center gap-[8px] w-[15%]">
+                <span class="font-[700] text-[13px] text-dark">30K</span>
+                <div class="w-full bg-[#339af0] rounded-t-[6px] h-[60%] transition-all hover:opacity-80 relative group">
+                   <span class="absolute inset-0 flex items-center justify-center text-white/50 font-[600] text-[12px] opacity-0 group-hover:opacity-100">30K</span>
+                </div>
+                <span class="text-[12px] text-muted font-[600]">2023</span>
+             </div>
+             
+             <div class="flex flex-col items-center gap-[8px] w-[15%]">
+                <span class="font-[700] text-[13px] text-dark">42K</span>
+                <div class="w-full bg-primary-blue rounded-t-[6px] h-[84%] transition-all hover:opacity-80 relative group">
+                   <span class="absolute inset-0 flex items-center justify-center text-white/50 font-[600] text-[12px] opacity-0 group-hover:opacity-100">42K</span>
+                </div>
+                <span class="text-[12px] text-muted font-[600]">2024</span>
+             </div>
+          </div>
+        </div>
+
+        <!-- Stories of Change -->
+        <div>
+          <h2 class="font-poppins font-[700] leading-[1.2] text-primary-blue text-[32px] md:text-[36px] mb-[10px]">
+            Stories of <span class="text-primary-orange">Change</span>
+          </h2>
+          <p class="text-muted text-[15px] mb-[30px]">
+            Real people. Real emotions. Real impact.
+          </p>
+
+          <div class="relative flex items-center gap-[15px]">
+            <!-- Nav Left -->
+            <button class="w-[32px] h-[32px] rounded-full border border-line bg-white flex items-center justify-center text-primary-blue hover:bg-primary-blue hover:text-white shrink-0">
+               <i class="ph ph-caret-left"></i>
+            </button>
+            
+            <!-- Testimonial Card -->
+            <div class="flex-1 bg-white rounded-[16px] shadow-[0_10px_30px_rgba(15,78,130,0.06)] border border-line flex flex-col md:flex-row overflow-hidden">
+               <!-- Image side -->
+               <div class="w-full md:w-[35%] h-[200px] md:h-auto shrink-0">
+                  <img src="assets/imgi_45_APF2.webp" alt="Sita Devi" class="w-full h-full object-cover">
+               </div>
+               <!-- Content side -->
+               <div class="p-[20px] flex-1 flex flex-col justify-center relative">
+                  <i class="ph-fill ph-quotes text-primary-blue/10 text-[48px] absolute top-[10px] right-[10px]"></i>
+                  <i class="ph-fill ph-quotes text-primary-blue text-[24px] mb-[10px]"></i>
+                  <p class="font-[500] text-[14px] text-dark leading-[1.6] mb-[15px] relative z-10 italic">
+                     "Your support gave us a safe home after the floods. We are forever grateful to the entire team."
+                  </p>
+                  <div class="flex items-center justify-between mt-auto">
+                     <div class="flex items-center gap-[10px]">
+                        <img src="assets/imgi_45_APF2.webp" class="w-[32px] h-[32px] rounded-full object-cover">
+                        <div>
+                           <strong class="font-[700] text-[13px] text-dark block leading-[1]">Sita Devi</strong>
+                           <span class="text-[11px] text-muted">Uttarakhand</span>
+                        </div>
+                     </div>
+                     <div class="flex gap-[2px] text-[#f9bc0f] text-[12px]">
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Nav Right -->
+            <button class="w-[32px] h-[32px] rounded-full border border-line bg-white flex items-center justify-center text-primary-blue hover:bg-primary-blue hover:text-white shrink-0">
+               <i class="ph ph-caret-right"></i>
+            </button>
+          </div>
+          
+          <!-- Pagination dots -->
+          <div class="flex justify-center gap-[6px] mt-[20px]">
+             <span class="w-[8px] h-[8px] rounded-full bg-primary-orange"></span>
+             <span class="w-[8px] h-[8px] rounded-full bg-line"></span>
+             <span class="w-[8px] h-[8px] rounded-full bg-line"></span>
+             <span class="w-[8px] h-[8px] rounded-full bg-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Moments That Matter -->
+    <section class="py-[70px] bg-[#fafbfe]">
+      <div class="w-[min(100%-28px,1280px)] mx-auto">
+        <div class="flex justify-between items-end mb-[30px]">
+          <div>
+            <span class="inline-flex items-center gap-[15px] text-primary-orange text-[12px] font-[800] tracking-[0.12em] uppercase mb-[10px]">
+              <span class="w-[30px] h-[2px] bg-primary-orange"></span> IMPACT IN ACTION
+            </span>
+            <h2 class="font-poppins font-[700] leading-[1.2] text-primary-blue text-[32px] md:text-[36px]">
+              Moments That <span class="text-primary-orange">Matter</span>
+            </h2>
+          </div>
+          <a href="#" class="hidden md:inline-flex items-center gap-[8px] px-[20px] py-[10px] rounded-full border-[2px] border-primary-orange text-primary-orange font-[700] text-[13px] hover:bg-primary-orange hover:text-white transition-colors">
+             View Full Gallery <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="relative flex items-center gap-[15px]">
+          <button class="w-[36px] h-[36px] rounded-full bg-white shadow flex items-center justify-center text-muted hover:text-primary-orange hidden md:flex shrink-0">
+             <i class="ph ph-caret-left"></i>
+          </button>
+          
+          <div class="flex-1 grid grid-cols-2 md:grid-cols-5 gap-[10px] md:gap-[15px]">
+             <div class="aspect-square md:aspect-[4/3] rounded-[16px] overflow-hidden">
+                <img src="assets/imgi_33_APF5.webp" class="w-full h-full object-cover hover:scale-110 transition-transform duration-[0.4s]">
+             </div>
+             <div class="aspect-square md:aspect-[4/3] rounded-[16px] overflow-hidden">
+                <img src="assets/imgi_20_APF3.webp" class="w-full h-full object-cover hover:scale-110 transition-transform duration-[0.4s]">
+             </div>
+             <div class="aspect-square md:aspect-[4/3] rounded-[16px] overflow-hidden hidden md:block">
+                <img src="assets/imgi_22_APF5.webp" class="w-full h-full object-cover hover:scale-110 transition-transform duration-[0.4s]">
+             </div>
+             <div class="aspect-square md:aspect-[4/3] rounded-[16px] overflow-hidden hidden md:block">
+                <img src="assets/imgi_41_APF3.webp" class="w-full h-full object-cover hover:scale-110 transition-transform duration-[0.4s]">
+             </div>
+             <div class="aspect-square md:aspect-[4/3] rounded-[16px] overflow-hidden hidden md:block">
+                <img src="assets/imgi_24_APF2.webp" class="w-full h-full object-cover hover:scale-110 transition-transform duration-[0.4s]">
+             </div>
+          </div>
+
+          <button class="w-[36px] h-[36px] rounded-full bg-white shadow flex items-center justify-center text-muted hover:text-primary-orange hidden md:flex shrink-0">
+             <i class="ph ph-caret-right"></i>
+          </button>
+        </div>
+        
+        <!-- Pagination dots -->
+        <div class="flex justify-center gap-[6px] mt-[25px]">
+           <span class="w-[8px] h-[8px] rounded-full bg-primary-orange"></span>
+           <span class="w-[8px] h-[8px] rounded-full bg-line"></span>
+           <span class="w-[8px] h-[8px] rounded-full bg-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-[40px] md:pb-[90px] pt-[20px]">
+      <div class="w-[min(100%-28px,1180px)] mx-auto bg-gradient-to-br from-primary-blue to-dark rounded-[18px] md:rounded-[24px] p-[34px_25px] md:p-[45px_55px] text-white flex flex-col md:flex-row justify-between gap-[30px] md:gap-[50px] items-center relative overflow-hidden">
+
+        <div class="relative z-10">
+          <span class="inline-block text-primary-orange text-[12px] font-[800] tracking-[0.12em] uppercase mb-[10px]">Make A Bigger Impact</span>
+          <h2 class="font-poppins font-[700] leading-[1.2] text-white text-[28px] md:text-[36px] max-w-[500px]">Create Sustained Impact. Support Verified Projects.</h2>
+          <p class="text-[#e2e8f0] mt-[10px] text-[15px]">Get regular updates. Save tax. Cancel anytime.</p>
+        </div>
+        <div class="relative z-10 w-full md:w-auto">
+          <a class="inline-flex items-center justify-center w-full md:w-auto gap-[10px] rounded-[10px] py-[14px] px-[32px] font-[700] cursor-pointer transition-[0.2s] bg-white text-primary-orange hover:bg-primary-orange hover:text-white shadow-lg text-[15px]"
+            href="#qr-code">Donate Now <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="relative bg-white pt-[60px] mt-[40px] border-t border-line overflow-hidden">
+    <!-- Main Footer Content -->
+    <div
+      class="relative z-10 w-[min(100%-28px,1280px)] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2.5fr] gap-[40px] lg:gap-[60px] pb-[150px] sm:pb-[180px] md:pb-[280px]">
+
+      <!-- Left Column: Info & QR -->
+      <div>
+        <a class="flex items-center mb-[20px]" href="index.html">
+          <img src="assets/ankush logo.png" alt="Ankush Purohit Foundation" class="w-[200px] h-auto object-contain">
+        </a>
+        <p class="text-[14px] text-muted mb-[25px] leading-[1.6]">We are a group of ground-level volunteers dedicated to
+          serving humanity. Through care, food, homes and humanitarian support, we work across India to bring change
+          with smiles.</p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-[12px] mb-[30px]">
+          <a href="#"
+            class="w-[34px] h-[34px] rounded-full flex items-center justify-center text-white bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] hover:opacity-90 transition-opacity"><i
+              class="ph-fill ph-instagram-logo text-[18px]"></i></a>
+          <a href="#"
+            class="w-[34px] h-[34px] rounded-full flex items-center justify-center text-white bg-[#0077b5] hover:opacity-90 transition-opacity"><i
+              class="ph-fill ph-linkedin-logo text-[18px]"></i></a>
+          <a href="#"
+            class="w-[34px] h-[34px] rounded-full flex items-center justify-center text-white bg-[#1877f2] hover:opacity-90 transition-opacity"><i
+              class="ph-fill ph-facebook-logo text-[18px]"></i></a>
+          <a href="#"
+            class="w-[34px] h-[34px] rounded-full flex items-center justify-center text-white bg-black hover:opacity-90 transition-opacity"><i
+              class="ph-fill ph-x-logo text-[18px]"></i></a>
+          <a href="#"
+            class="w-[34px] h-[34px] rounded-full flex items-center justify-center text-white bg-[#ff0000] hover:opacity-90 transition-opacity"><i
+              class="ph-fill ph-youtube-logo text-[18px]"></i></a>
+        </div>
+
+        <!-- Support Our Seva QR Block -->
+        <div id="qr-code" class="bg-[#fdf8f4] border border-[#f5e3d7] rounded-[16px] p-[20px] max-w-[260px] text-center shadow-[0_4px_15px_rgba(241,126,48,0.1)]">
+          <h4 class="text-primary-red font-[700] text-[15px] mb-[15px]">Support Our Seva</h4>
+          <img src="assets/QR.png" alt="Payment QR Code" class="w-[150px] h-auto mx-auto rounded-[8px] mb-[12px] border border-[#f5e3d7]">
+          <a href="#qr-code" class="inline-block w-full bg-primary-orange text-white py-[10px] rounded-[8px] font-[600] text-[14px] hover:bg-primary-blue transition-colors">Donate Now</a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Links Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[40px] md:gap-[30px]">
+        <!-- About Us -->
+        <div>
+          <h4
+            class="text-primary-blue font-[800] text-[15px] uppercase mb-[20px] relative inline-block after:content-[''] after:absolute after:-bottom-[6px] after:left-0 after:w-[35px] after:h-[3px] after:bg-primary-orange">
+            ABOUT US</h4>
+          <ul class="grid gap-[14px] text-[14px] text-muted font-[500]">
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> About Us</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Our Vision and Mission</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Our Story</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Board of Trustees</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Reports & Transparency</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Tax Exemption</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Donation FAQs</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Terms and Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Work -->
+        <div>
+          <h4
+            class="text-primary-blue font-[800] text-[15px] uppercase mb-[20px] relative inline-block after:content-[''] after:absolute after:-bottom-[6px] after:left-0 after:w-[35px] after:h-[3px] after:bg-primary-orange">
+            OUR WORK</h4>
+          <ul class="grid gap-[14px] text-[14px] text-muted font-[500]">
+            <li><a href="index.html#what-we-do" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Our Work</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> We Provide Care</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> We Make Homes</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Humanitarian Response</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Food & Meal Distribution</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Community Support</a></li>
+            <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Volunteer Seva</a></li>
+            <li><a href="our.html" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                  class="ph ph-caret-right text-primary-orange text-[12px]"></i> Impact & Stories</a></li>
+          </ul>
+        </div>
+
+        <!-- Multi-section -->
+        <div class="grid gap-[35px]">
+          <!-- Donate -->
+          <div>
+            <h4
+              class="text-primary-blue font-[800] text-[15px] uppercase mb-[20px] relative inline-block after:content-[''] after:absolute after:-bottom-[6px] after:left-0 after:w-[35px] after:h-[3px] after:bg-primary-orange">
+              DONATE</h4>
+            <ul class="grid gap-[14px] text-[14px] text-muted font-[500]">
+              <li><a href="#qr-code" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Online Donations</a></li>
+              <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Support a Project</a></li>
+              <li><a href="#qr-code" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Give Monthly</a></li>
+              <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Sponsor a Family</a></li>
+              <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Sponsor a Home</a></li>
+              <li><a href="#" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Sponsor a Meal</a></li>
+            </ul>
+          </div>
+
+          <!-- Get In Touch -->
+          <div>
+            <h4
+              class="text-primary-blue font-[800] text-[15px] uppercase mb-[20px] relative inline-block after:content-[''] after:absolute after:-bottom-[6px] after:left-0 after:w-[35px] after:h-[3px] after:bg-primary-orange">
+              GET IN TOUCH</h4>
+            <ul class="grid gap-[14px] text-[14px] text-muted font-[500]">
+              <li><a href="index.html#contact" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Get Involved -->
+          <div>
+            <h4
+              class="text-primary-blue font-[800] text-[15px] uppercase mb-[20px] relative inline-block after:content-[''] after:absolute after:-bottom-[6px] after:left-0 after:w-[35px] after:h-[3px] after:bg-primary-orange">
+              GET INVOLVED</h4>
+            <ul class="grid gap-[14px] text-[14px] text-muted font-[500]">
+              <li><a href="index.html#contact" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Volunteer With Us</a></li>
+              <li><a href="index.html#fundraisers" class="hover:text-primary-orange flex items-center gap-[8px]"><i
+                    class="ph ph-caret-right text-primary-orange text-[12px]"></i> Be a Fundraiser</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blue Footer Strip -->
+    <div
+      class="relative z-20 bg-primary-blue text-white py-[20px] md:py-[16px] text-[12px] font-[500] mt-[20px] md:mt-0">
+      <!-- Background decorative image -->
+      <div
+        class="absolute bottom-full left-0 w-full z-[-1] pointer-events-none translate-y-[15%] sm:translate-y-[20%] md:translate-y-[25%]">
+        <img src="assets/footer png des.png" alt="" class="w-full h-auto object-cover md:object-contain object-bottom">
+      </div>
+
+      <div
+        class="w-[min(100%-28px,1280px)] mx-auto flex flex-col items-center justify-center text-center relative z-10">
+        <div
+          class="inline-block bg-white text-primary-blue px-[20px] py-[8px] rounded-full font-[700] text-[13px] shadow-[0_5px_15px_rgba(0,0,0,0.15)]">
+          <span>© 2026 Ankush Purohit Foundation. All Rights Reserved.Crafted by <a
+              href="https://redescreation.in">redescreation.in</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
