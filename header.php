@@ -70,6 +70,18 @@
         opacity: 1;
       }
   </style>
+  <style>
+    /* Hide Google Translate top banner & toolbar */
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+    }
+    #goog-gt-tt {
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body class="font-sans text-dark bg-[#fafbfe] leading-[1.6]">
@@ -129,8 +141,44 @@
           class="p-[10px_16px] lg:p-[8px_0px] hover:text-primary-orange transition-colors">Categories</a>
         <a href="contact.php"
           class="p-[10px_16px] lg:p-[8px_0px] hover:text-primary-orange transition-colors">Contact</a>
+        <div class="p-[10px_16px] lg:p-[8px_0px] flex items-center">
+          <select id="customLangSwitcher" class="bg-transparent border border-line rounded px-2 py-1 text-sm font-semibold outline-none cursor-pointer focus:border-primary-blue transition-colors">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
         <a class="bg-primary-orange text-white flex items-center justify-center px-[28px] py-[12px] rounded-[8px] font-[700] text-[15px] hover:opacity-90 transition-opacity lg:ml-[10px] mt-[10px] lg:mt-0"
           href="#qr-code">Donate now</a>
       </nav>
+      <!-- Google Translate Element (Hidden) -->
+      <div id="google_translate_element" style="display:none;"></div>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi', autoDisplay: false}, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const switcher = document.getElementById('customLangSwitcher');
+          
+          // Check for saved language preference in cookies
+          const cookieMatch = document.cookie.match(/(^|;\s*)googtrans=([^;]*)/);
+          if (cookieMatch) {
+            const lang = cookieMatch[2].split('/').pop();
+            if (lang === 'hi' || lang === 'en') {
+              switcher.value = lang;
+            }
+          }
+
+          switcher.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            // Set google translate cookie
+            document.cookie = `googtrans=/en/${lang}; path=/`;
+            document.cookie = `googtrans=/en/${lang}; domain=${location.hostname}; path=/`;
+            location.reload();
+          });
+        });
+      </script>
     </div>
   </header>
