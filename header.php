@@ -72,14 +72,15 @@
   </style>
   <style>
     /* Hide Google Translate top banner & toolbar */
-    .goog-te-banner-frame.skiptranslate {
+    .goog-te-banner-frame.skiptranslate,
+    iframe.goog-te-banner-frame,
+    .VIpgJd-ZVi9od-ORHb-OEVmcd,
+    .VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+    #goog-gt-tt {
       display: none !important;
     }
     body {
       top: 0px !important;
-    }
-    #goog-gt-tt {
-      display: none !important;
     }
   </style>
 </head>
